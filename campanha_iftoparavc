@@ -193,13 +193,16 @@
                     Quase 70% dos entrevistados querem receber novidades. Junte-se a eles! Deixe seu contato e fique por dentro de tudo sobre o Processo Seletivo e nossos principais eventos: a <strong>SEMAD</strong> (Semana Acadêmica do Administrador), o <strong>IFTO em Ação</strong> e a <strong>Imersão Empreendedora</strong> (aberta ao público).
                 </p>
                 
-                <form class="max-w-md mx-auto" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScwwNlgSm__hmEffsrAYKu7Esgy-xm-pwCDQ3-UhyKHTQmnYA/formResponse" method="POST" target="hidden_iframe" onsubmit="return handleFormSubmit()">
+                <form id="contact-form" class="max-w-md mx-auto" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScwwNlgSm__hmEffsrAYKu7Esgy-xm-pwCDQ3-UhyKHTQmnYA/formResponse" method="POST" target="hidden_iframe">
                     <div class="flex flex-col sm:flex-row gap-4">
                         <input id="email-input" type="email" name="entry.1841911311" placeholder="Digite seu melhor e-mail" class="w-full px-5 py-3 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300" required>
-                        <button type="submit" class="bg-white text-blue-700 font-bold py-3 px-6 rounded-md hover:bg-gray-200 transition duration-300">
+                        <!-- BOTÃO ALTERADO: type="button" e chama a função validateAndSubmit() -->
+                        <button type="button" onclick="validateAndSubmit()" class="bg-white text-blue-700 font-bold py-3 px-6 rounded-md hover:bg-gray-200 transition duration-300">
                             Quero Novidades
                         </button>
                     </div>
+                    <!-- Mensagem de erro (inicialmente oculta) -->
+                    <p id="email-error" class="text-yellow-300 font-semibold mt-3 hidden">Por favor, digite um endereço de e-mail válido.</p>
                 </form>
             </div>
             <!-- Mensagem de confirmação que aparece após o envio -->
@@ -221,27 +224,31 @@
 
     <!-- ========== Script para Animações e Formulário ========== -->
     <script>
-        // Script do formulário com validação
-        function handleFormSubmit() {
+        // NOVA FUNÇÃO DE VALIDAÇÃO E ENVIO
+        function validateAndSubmit() {
+            const form = document.getElementById('contact-form');
             const emailInput = document.getElementById('email-input');
+            const errorElement = document.getElementById('email-error');
             const emailValue = emailInput.value.trim();
 
-            // Validação para garantir que o e-mail não está vazio e parece válido
-            if (emailValue === "" || !emailValue.includes('@') || !emailValue.includes('.')) {
-                alert("Por favor, digite um endereço de e-mail válido.");
-                return false; // Cancela o envio do formulário se for inválido
+            // Validação rigorosa do e-mail
+            if (emailValue === "" || !emailValue.includes('@') || emailValue.indexOf('.') === -1) {
+                errorElement.classList.remove('hidden'); // Mostra a mensagem de erro
+                return; // Para a execução
             }
 
-            // Se a validação passar, mostra a mensagem de confirmação
+            // Se a validação passar:
+            errorElement.classList.add('hidden'); // Esconde a mensagem de erro (caso estivesse visível)
+            form.submit(); // Envia o formulário
+
+            // Mostra a mensagem de confirmação
             setTimeout(() => {
                 document.getElementById('form-container').classList.add('hidden');
                 document.getElementById('confirmation-message').classList.remove('hidden');
             }, 500);
-
-            return true; // Permite o envio do formulário
         }
 
-        // Script de animação
+        // Script de animação (sem alterações)
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('.fade-in-section');
 
