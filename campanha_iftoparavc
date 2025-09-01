@@ -18,15 +18,15 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Cor de destaque inspirada no IFTO */
-        .highlight-green {
-            color: #008000;
+        /* Cor de destaque (Azul - Administração) */
+        .highlight-blue {
+            color: #1D4ED8; /* blue-700 */
         }
-        .bg-brand-green {
-            background-color: #008000;
+        .bg-brand-blue {
+            background-color: #1D4ED8; /* blue-700 */
         }
-        .border-brand-green {
-            border-color: #008000;
+        .border-brand-blue {
+            border-color: #1D4ED8; /* blue-700 */
         }
         /* Animação de fade-in */
         .fade-in-section {
@@ -45,7 +45,7 @@
     <!-- ========== Seção Principal (Hero) ========== -->
     <header class="w-full bg-white shadow-sm p-4 text-center">
         <h1 class="text-xl font-bold text-gray-800">
-            <span class="highlight-green">IFTO</span> | Administração
+            <span class="highlight-blue">IFTO</span> | Administração
         </h1>
         <p class="text-sm text-gray-500">Campus Paraíso do Tocantins</p>
     </header>
@@ -54,12 +54,12 @@
         <section class="min-h-[70vh] flex items-center justify-center bg-white">
             <div class="text-center p-8 max-w-3xl mx-auto">
                 <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">
-                    Abra as portas do <span class="highlight-green">seu futuro</span> profissional.
+                    Abra as portas do <span class="highlight-blue">seu futuro</span> profissional.
                 </h2>
                 <p class="text-lg md:text-xl text-gray-600 mb-8">
                     Descubra o curso de Administração do IFTO: uma formação de excelência, gratuita e que te prepara para as melhores oportunidades do mercado.
                 </p>
-                <a href="#diferenciais" class="bg-brand-green text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-700 transition duration-300 shadow-lg">
+                <a href="#diferenciais" class="bg-brand-blue text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-800 transition duration-300 shadow-lg">
                     Conheça o curso
                 </a>
             </div>
@@ -79,18 +79,18 @@
                         Durante a graduação, você terá uma base sólida em áreas essenciais que o mercado de trabalho valoriza, preparando você para atuar em:
                     </p>
                     <div class="mt-8 flex flex-wrap justify-center gap-x-4 gap-y-3">
-                        <span class="bg-green-100 text-green-800 text-sm font-semibold px-4 py-2 rounded-full shadow-sm">Recursos Humanos</span>
-                        <span class="bg-green-100 text-green-800 text-sm font-semibold px-4 py-2 rounded-full shadow-sm">Rotinas Administrativas</span>
-                        <span class="bg-green-100 text-green-800 text-sm font-semibold px-4 py-2 rounded-full shadow-sm">Investimentos</span>
-                        <span class="bg-green-100 text-green-800 text-sm font-semibold px-4 py-2 rounded-full shadow-sm">Empreendedorismo</span>
-                        <span class="bg-green-100 text-green-800 text-sm font-semibold px-4 py-2 rounded-full shadow-sm">Inovação</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full shadow-sm">Recursos Humanos</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full shadow-sm">Rotinas Administrativas</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full shadow-sm">Investimentos</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full shadow-sm">Empreendedorismo</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full shadow-sm">Inovação</span>
                     </div>
                 </div>
                 
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Card 1: Nota do MEC -->
                     <div class="bg-white p-8 rounded-xl shadow-md text-center fade-in-section">
-                        <div class="text-6xl font-extrabold highlight-green">4.11</div>
+                        <div class="text-6xl font-extrabold highlight-blue">4.11</div>
                         <div class="text-lg font-semibold text-gray-700">de 5.0 na nota do MEC</div>
                         <p class="mt-4 text-gray-600">
                             <span class="font-bold">Você sabia? 60% do público não conhecia nossa nota!</span> Tenha a segurança de uma formação de alta qualidade, reconhecida pelo Ministério da Educação.
@@ -99,7 +99,7 @@
 
                     <!-- Card 2: Oportunidades -->
                     <div class="bg-white p-8 rounded-xl shadow-md text-center fade-in-section">
-                        <svg class="w-16 h-16 mx-auto highlight-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <svg class="w-16 h-16 mx-auto highlight-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                         <h4 class="text-xl font-bold mt-4">Um leque de oportunidades</h4>
                         <p class="mt-2 text-gray-600">
                            A principal vantagem, segundo os próprios interessados. Prepare-se para uma carreira ampla, com portas abertas para crescer profissionalmente ou ter seu próprio negócio.
@@ -108,7 +108,7 @@
 
                     <!-- Card 3: Formação para a Vida -->
                     <div class="bg-white p-8 rounded-xl shadow-md text-center fade-in-section">
-                        <svg class="w-16 h-16 mx-auto highlight-green" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <svg class="w-16 h-16 mx-auto highlight-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.311a12.06 12.06 0 00-4.5 0m3.75 2.311a12.06 12.06 0 01-4.5 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                           
@@ -129,13 +129,13 @@
                 </div>
 
                 <div class="space-y-8">
-                    <blockquote class="p-6 border-l-4 border-brand-green bg-gray-50 rounded-r-lg fade-in-section">
+                    <blockquote class="p-6 border-l-4 border-brand-blue bg-gray-50 rounded-r-lg fade-in-section">
                         <p class="text-lg text-gray-700 italic">"...a vantagem central é ter uma formação ampla e multidisciplinar, que abre muitas portas no mercado de trabalho."</p>
                     </blockquote>
-                    <blockquote class="p-6 border-l-4 border-brand-green bg-gray-50 rounded-r-lg fade-in-section text-right">
+                    <blockquote class="p-6 border-l-4 border-brand-blue bg-gray-50 rounded-r-lg fade-in-section text-right">
                         <p class="text-lg text-gray-700 italic">"O curso de Administração é essencial na nossa vida, pois no geral aprendemos sobre organização, planejamento, controle financeiro..."</p>
                     </blockquote>
-                     <blockquote class="p-6 border-l-4 border-brand-green bg-gray-50 rounded-r-lg fade-in-section">
+                     <blockquote class="p-6 border-l-4 border-brand-blue bg-gray-50 rounded-r-lg fade-in-section">
                         <p class="text-lg text-gray-700 italic">"Adquiri conhecimento e uma profissão que cresce a cada momento."</p>
                     </blockquote>
                 </div>
@@ -153,7 +153,7 @@
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Card 1: SISU / ENEM -->
                     <div class="bg-white p-8 rounded-xl shadow-md text-center fade-in-section">
-                        <svg class="w-16 h-16 mx-auto highlight-green" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <svg class="w-16 h-16 mx-auto highlight-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0-2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                         </svg>
                         <h4 class="text-xl font-bold mt-4">Via SISU (ENEM)</h4>
@@ -167,7 +167,7 @@
 
                     <!-- Card 2: Exato -->
                     <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-yellow-400 text-center fade-in-section">
-                         <svg class="w-16 h-16 mx-auto highlight-green" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                         <svg class="w-16 h-16 mx-auto highlight-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
                         </svg>
                         <h4 class="text-xl font-bold mt-4">Via Exato</h4>
@@ -186,21 +186,17 @@
         </section>
 
         <!-- ========== Seção de Chamada para Ação (Lead Capture) ========== -->
-        <section class="bg-brand-green text-white">
+        <section class="bg-brand-blue text-white">
             <div id="form-container" class="container mx-auto px-6 py-20 max-w-4xl text-center">
                 <h3 class="text-3xl font-bold mb-4">Pronto para dar o próximo passo?</h3>
                 <p class="text-lg opacity-90 mb-8">
                     Quase 70% dos entrevistados querem receber novidades. Junte-se a eles! Deixe seu contato e fique por dentro de tudo sobre o Processo Seletivo e nossos principais eventos: a <strong>SEMAD</strong> (Semana Acadêmica do Administrador), o <strong>IFTO em Ação</strong> e a <strong>Imersão Empreendedora</strong> (aberta ao público).
                 </p>
-                <!-- 
-                    INSTRUÇÕES: Siga o guia para encontrar sua URL e o NOME do campo.
-                    1. Cole a "URL de Ação" do seu Google Form no atributo 'action' abaixo.
-                    2. Cole o "Nome do Campo de E-mail" (ex: entry.12345) no atributo 'name' do campo de e-mail.
-                -->
-                <form class="max-w-md mx-auto" action="url" method="POST" target="hidden_iframe" onsubmit="handleFormSubmit()">
+                
+                <form class="max-w-md mx-auto" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScwwNlgSm__hmEffsrAYKu7Esgy-xm-pwCDQ3-UhyKHTQmnYA/formResponse" method="POST" target="hidden_iframe" onsubmit="handleFormSubmit()">
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <input type="email" name="chave" placeholder="Digite seu melhor e-mail" class="w-full px-5 py-3 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-300" required>
-                        <button type="submit" class="bg-white text-brand-green font-bold py-3 px-6 rounded-md hover:bg-gray-200 transition duration-300">
+                        <input type="email" name="entry.1841911311" placeholder="Digite seu melhor e-mail" class="w-full px-5 py-3 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                        <button type="submit" class="bg-white text-blue-700 font-bold py-3 px-6 rounded-md hover:bg-gray-200 transition duration-300">
                             Quero Novidades
                         </button>
                     </div>
@@ -215,7 +211,7 @@
     </main>
 
     <!-- Iframe oculto para enviar o formulário sem sair da página -->
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){}"></iframe>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
     <!-- ========== Rodapé ========== -->
     <footer class="bg-gray-800 text-white p-8 text-center">
