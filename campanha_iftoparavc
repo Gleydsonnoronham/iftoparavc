@@ -185,37 +185,7 @@
             </div>
         </section>
 
-        <!-- ========== Seção de Chamada para Ação (Lead Capture) ========== -->
-        <section class="bg-brand-blue text-white">
-            <div id="form-container" class="container mx-auto px-6 py-20 max-w-4xl text-center">
-                <h3 class="text-3xl font-bold mb-4">Pronto para dar o próximo passo?</h3>
-                <p class="text-lg opacity-90 mb-8">
-                    Quase 70% dos entrevistados querem receber novidades. Junte-se a eles! Deixe seu contato e fique por dentro de tudo sobre o Processo Seletivo e nossos principais eventos: a <strong>SEMAD</strong> (Semana Acadêmica do Administrador), o <strong>IFTO em Ação</strong> e a <strong>Imersão Empreendedora</strong> (aberta ao público).
-                </p>
-                
-                <!-- FORMULÁRIO CORRIGIDO -->
-                <form id="contact-form" class="max-w-md mx-auto" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScwwNlgSm__hmEffsrAYKu7Esgy-xm-pwCDQ3-UhyKHTQmnYA/formResponse" method="POST" target="hidden_iframe" onsubmit="return validateAndSubmit()">
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <input id="email-input" type="email" name="entry.1841911311" placeholder="Digite seu melhor e-mail" class="w-full px-5 py-3 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300" required>
-                        <!-- Botão type="submit" para funcionar com a tecla Enter -->
-                        <button type="submit" class="bg-white text-blue-700 font-bold py-3 px-6 rounded-md hover:bg-gray-200 transition duration-300">
-                            Quero Novidades
-                        </button>
-                    </div>
-                     <!-- Mensagem de erro (inicialmente oculta) -->
-                     <p id="email-error" class="text-yellow-300 font-semibold mt-3 hidden">Por favor, digite um endereço de e-mail válido.</p>
-                </form>
-            </div>
-            <!-- Mensagem de confirmação que aparece após o envio -->
-            <div id="confirmation-message" class="container mx-auto px-6 py-20 max-w-4xl text-center hidden">
-                <h3 class="text-3xl font-bold mb-4">✅ Obrigado!</h3>
-                <p class="text-lg opacity-90">Seu e-mail foi registrado com sucesso. Em breve você receberá nossas novidades!</p>
-            </div>
-        </section>
     </main>
-
-    <!-- Iframe oculto para enviar o formulário sem sair da página -->
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
     <!-- ========== Rodapé ========== -->
     <footer class="bg-gray-800 text-white p-8 text-center">
@@ -223,32 +193,8 @@
         <p class="text-sm opacity-70">Campus Paraíso do Tocantins</p>
     </footer>
 
-    <!-- ========== Script para Animações e Formulário ========== -->
+    <!-- ========== Script para Animações ========== -->
     <script>
-        // FUNÇÃO DE VALIDAÇÃO CORRIGIDA
-        function validateAndSubmit() {
-            const emailInput = document.getElementById('email-input');
-            const errorElement = document.getElementById('email-error');
-            const emailValue = emailInput.value.trim();
-
-            // Validação rigorosa do e-mail
-            if (emailValue === "" || !emailValue.includes('@') || emailValue.indexOf('.') === -1) {
-                errorElement.classList.remove('hidden'); // Mostra a mensagem de erro
-                return false; // IMPEDE o envio do formulário
-            }
-
-            // Se a validação passar:
-            errorElement.classList.add('hidden'); // Esconde a mensagem de erro
-
-            // Mostra a mensagem de confirmação
-            setTimeout(() => {
-                document.getElementById('form-container').classList.add('hidden');
-                document.getElementById('confirmation-message').classList.remove('hidden');
-            }, 100);
-
-            return true; // PERMITE o envio do formulário
-        }
-
         // Script de animação (sem alterações)
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('.fade-in-section');
