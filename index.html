@@ -185,32 +185,24 @@
             </div>
         </section>
 
-        <!-- ========== Seção de Chamada para Ação (Lead Capture) ========== -->
+        <!-- ========== Seção de Chamada para Ação (WhatsApp) ========== -->
         <section class="bg-brand-blue text-white">
-            <div id="form-wrapper" class="container mx-auto px-6 py-20 max-w-4xl text-center">
-                <div id="form-container">
-                    <h3 class="text-3xl font-bold mb-4">Pronto para dar o próximo passo?</h3>
-                    <p class="text-lg opacity-90 mb-8">
-                        Quase 70% dos entrevistados querem receber novidades. Junte-se a eles! Deixe seu contato e fique por dentro de tudo sobre o Processo Seletivo e nossos principais eventos: a <strong>SEMAD</strong>, o <strong>IFTO em Ação</strong> e a <strong>Imersão Empreendedora</strong>.
-                    </p>
-                    
-                    <form id="contact-form" class="max-w-md mx-auto">
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <input id="email-input" type="email" name="entry.1841911311" placeholder="Digite seu melhor e-mail" class="w-full px-5 py-3 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300" required>
-                            <button type="submit" class="bg-white text-blue-700 font-bold py-3 px-6 rounded-md hover:bg-gray-200 transition duration-300">
-                                Quero Novidades
-                            </button>
-                        </div>
-                        <p id="email-error" class="text-yellow-300 font-semibold mt-3 hidden">Por favor, digite um endereço de e-mail válido.</p>
-                    </form>
-                </div>
-                
-                <div id="confirmation-message" class="hidden">
-                    <h3 class="text-3xl font-bold mb-4">✅ Obrigado!</h3>
-                    <p class="text-lg opacity-90">Seu e-mail foi registrado com sucesso. Em breve você receberá nossas novidades!</p>
-                </div>
+            <div class="container mx-auto px-6 py-20 max-w-4xl text-center">
+                <h3 class="text-3xl font-bold mb-4">Faça Parte da Nossa Comunidade!</h3>
+                <p class="text-lg opacity-90 mb-8">
+                    Clique no botão abaixo para entrar em contato via WhatsApp, tirar suas dúvidas e receber em primeira mão todas as novidades sobre o curso, eventos e o processo seletivo.
+                </p>
+                <a 
+                    href="https://wa.me/5563992520239?text=Vou%20ser%20acad%C3%AAmico%20e%20quero%20fazer%20parte%20da%20comunidade%20do%20whatsapp%20para%20ficar%20por%20dentro%20das%20novidades%20do%20IFTO%20Campus%20Para%C3%ADso%20do%20Tocantins" 
+                    target="_blank" 
+                    class="inline-flex items-center gap-3 bg-white text-blue-700 font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-200 transition duration-300 shadow-lg"
+                >
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52s-.67-.816-.916-1.123c-.247-.306-.5-.337-.67-.341-.164-.004-.37.004-.57.004-.198 0-.52.074-.792.372-.27.297-1.04.99-1.04 2.413 0 1.422.94 2.806 1.06 2.998.12.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                    <span>Entrar em Contato via WhatsApp</span>
+                </a>
             </div>
         </section>
+
     </main>
 
     <!-- ========== Rodapé ========== -->
@@ -219,11 +211,11 @@
         <p class="text-sm opacity-70">Campus Paraíso do Tocantins</p>
     </footer>
 
-    <!-- ========== Script para Animações e Formulário ========== -->
+    <!-- ========== Script para Animações ========== -->
     <script>
-        // Script de Animação
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('.fade-in-section');
+
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -233,52 +225,10 @@
             }, {
                 threshold: 0.1
             });
+
             sections.forEach(section => {
                 observer.observe(section);
             });
-
-            // Script de Formulário Robusto
-            const form = document.getElementById('contact-form');
-            if (form) {
-                form.addEventListener('submit', function(event) {
-                    event.preventDefault(); // Impede o envio padrão do formulário
-
-                    const emailInput = document.getElementById('email-input');
-                    const errorElement = document.getElementById('email-error');
-                    const formContainer = document.getElementById('form-container');
-                    const confirmationMessage = document.getElementById('confirmation-message');
-
-                    const emailValue = emailInput.value.trim();
-
-                    // 1. Validação
-                    if (emailValue === "" || !emailValue.includes('@') || emailValue.indexOf('.') === -1) {
-                        errorElement.classList.remove('hidden');
-                        return; // Para a execução aqui se o e-mail for inválido
-                    }
-
-                    // 2. Preparação para o envio
-                    errorElement.classList.add('hidden');
-                    const formData = new FormData();
-                    formData.append('entry.1841911311', emailValue);
-                    const googleFormUrl = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScwwNlgSm__hmEffsrAYKu7Esgy-xm-pwCDQ3-UhyKHTQmnYA/formResponse';
-
-                    // 3. Envio Assíncrono com Fetch
-                    fetch(googleFormUrl, {
-                        method: 'POST',
-                        body: formData,
-                        mode: 'no-cors' // Essencial para evitar erros de CORS com o Google Forms
-                    }).then(() => {
-                        // 4. Sucesso: Mostra a mensagem de confirmação
-                        formContainer.classList.add('hidden');
-                        confirmationMessage.classList.remove('hidden');
-                    }).catch(error => {
-                        // Em caso de erro, apenas loga no console para não confundir o usuário.
-                        console.error('Erro ao enviar o formulário:', error);
-                        // Opcional: mostrar uma mensagem de erro para o usuário.
-                        alert('Ocorreu um erro ao enviar seu e-mail. Tente novamente.');
-                    });
-                });
-            }
         });
     </script>
 
